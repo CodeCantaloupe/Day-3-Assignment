@@ -1,0 +1,170 @@
+@import url('https://fonts.googleapis.com/css2?family=Abel&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Changa:wght@200..800&display=swap');
+@import url("./style.css");
+
+.art-articles-section {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    margin-top: 100px;
+}
+
+.art-sketches-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    margin: 20px;
+    gap: 10px;
+}
+
+.art-articles-section h2 {
+    font-family: 'Changa', sans-serif;
+    font-size: 50px;
+    font-weight: lighter;
+}
+
+.art-sketch{
+    height: 400px;
+    width: 350px;
+    border-radius: 10px;
+    overflow: hidden;
+    position: relative;
+}
+
+.art-sketch img {
+    object-fit: cover;
+    height: 100%;
+    width: 100%;
+}
+
+.art-sketch div {
+    width: 100%;
+    height: auto;
+    padding: 20px;
+    background-color: rgba(0, 0, 0, 0.6);
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    color: wheat;
+    border-top-left-radius: 40px;
+    border-top-right-radius: 40px;
+}
+
+.art-sketch div p {
+    margin-bottom: 20px;
+    font-family: 'Abel', sans-serif;
+    font-size: 20px;
+}
+
+.read-btn {
+    font-size: 20px;
+    padding: 15px 30px;
+    background-color: var(--main-color);
+    border: none;
+    border-radius: 10px;
+    font-family: 'Abel';
+    cursor: pointer;
+}
+
+@media screen and (max-width: 700px) {
+    .art-sketches-container {
+        flex-direction: column;
+    }
+}
+
+.footer {
+    background-color: black;
+    color: white;
+    font-family: 'Abel', sans-serif;
+}
+
+.footer-top {
+    display: flex;
+    align-items: center;
+    padding: 50px 100px;
+    text-wrap: wrap;
+}
+
+.footer-logo {
+    width: 33.3vw;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.footer-logo img {
+    width: 60px;
+}
+
+.footer-contact {
+    width: 33.3vw;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+}
+
+.contacts {
+    display: flex;
+    gap: 10px;
+    margin-top: 50px;
+}
+
+.contacts h2 {
+    margin-bottom: 30px;
+}
+
+.contacts a {
+    padding: 10px;
+    background-color: white;
+    border-radius: 100%;
+    display: flex;
+}
+
+.contact-facebook:hover {
+    background-color: linear-gradient();
+}
+
+.contacts a img {
+    width: 30px;
+}
+
+.footer-main-links {
+    width: 33.3vw;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+}
+
+.footer-main-links h2 {
+    margin-bottom: 20px;
+}
+
+.footer-main-links a {
+    color: white;
+    text-decoration: none;
+}
+
+.footer-main-links a:hover {
+    color: var(--main-color);
+}
+
+.footer-bottom {
+    text-align: center;
+    padding: 10px;
+}
+
+@media screen and (max-width: 700px) {
+    .footer-top {
+        display: flex;
+        flex-direction: column;
+        gap: 40px;
+    }
+
+}

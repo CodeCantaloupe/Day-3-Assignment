@@ -1,0 +1,219 @@
+@import url('https://fonts.googleapis.com/css2?family=Abel&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Changa:wght@200..800&display=swap');
+
+:root {
+    --main-color: #d8b454;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    overflow-x: hidden;
+    scrollbar-color: var(--main-color) white;
+    scrollbar-width: thin;
+}
+
+nav {
+    z-index: 999;
+    height: 60px;
+    width: 100%;    
+    display: flex;
+    background-color: black;
+    justify-content: space-between;
+    align-items: center;
+    position: fixed;
+}
+
+.logo {
+    height: 50px;
+    margin: 5px 20px;
+}
+
+.links {
+    display: flex;
+}
+
+.links a {
+    padding: 10px 20px;
+    position: relative;
+    font-size: 20px;
+    text-decoration: none;
+    color: var(--main-color);
+    font-family: 'Abel', sans-serif;
+}
+
+.links a::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: 4px;
+    width: 0;
+    height: 4px;
+    background-color: var(--main-color);
+    border-radius: 2px;
+    transition: width 0.25s ease-in-out;
+}
+
+.links a:hover::after {
+    width: 100%;
+    cursor: pointer;
+}
+
+.links a:nth-child(1)::after {
+    width: 100%;
+}
+
+.toggler {
+    display: none;
+    margin: 20px;
+    cursor: pointer;
+    background-color: transparent;
+    border: none;
+}
+
+.introduction {
+    height: 100vh;
+    background-image: url("./img/bg.jpg");
+    background-attachment: fixed;
+    background-size:cover;
+    background-repeat: no-repeat;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.introduction h1 {
+    color: var(--main-color);
+    font-family: 'Changa', sans-serif;
+    text-align: center;
+    font-size: 100px;
+    font-weight: 400;
+    cursor:default;
+    margin-top: 100px;
+}
+
+.discover {
+    margin-bottom: 200px;
+    font-size: 20px;
+    padding: 15px 30px;
+    background-color: var(--main-color);
+    border: none;
+    border-radius: 10px;
+    font-family: 'Abel';
+    cursor: pointer;
+}
+
+.discover:hover {
+    background-color: #816822;
+    color: white;
+    transition: 1.2s;
+}
+
+/*Our Arts Section*/
+.art-sections   {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: 20px;
+}
+
+.art-sections-intro {
+    font-size: 50px;
+    margin: 5%;
+    font-weight:lighter;
+    text-align: center;
+    font-family: 'Changa', sans-serif;
+}
+
+.art-sections-cards {
+    display: flex;
+    justify-content: center;
+    margin: 10px 20px 10px 30px;
+}
+
+.card {
+    margin-left: 10px;
+    background-color: black;
+    color: var(--main-color);
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    font-family: 'Abel';
+    transition: transform 0.3s ease-in, box-shadow 0.3s ease-in;
+}
+
+.card:hover {
+    transform: scale(1.05); 
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);    
+}
+.card-img {
+    width: 100%;
+}
+.card h2 {
+    margin: 20px 0 10px;
+}
+.card p {
+    width: 80%;
+    text-align: justify;
+    text-justify: inter-cluster;
+}
+.card a {
+    color: white;
+    text-decoration: none;
+    margin: 10px 0 20px;
+}
+.card a:hover {
+    color: var(--main-color);
+}
+
+/*Utility classes*/
+.display {
+    display: none;
+}
+
+/*Media Queries*/
+@media screen and (max-width: 750px) {
+    nav {
+        position: relative;
+        position: fixed;
+        z-index: 999;
+    }
+
+    .links {
+        position: absolute;
+        top: 60px;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        background-color: black;
+        width: 100%;
+        height: calc(100vh - 10px);
+    }
+
+    .toggler{
+        display: inline-block;
+    }
+
+    .introduction h1 {
+        font-size: 50px;
+        margin-top: 90px;
+        text-align: center;
+    }
+
+    .art-sections-cards {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .card {
+        margin-top: 20px;
+    }
+}
