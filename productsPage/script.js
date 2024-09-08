@@ -17,10 +17,13 @@ let getData = async (url) => {
                     <p style="display:inline; font-weight:500; font-size: 20px">
                         ${product.price} EGP
                     </p>
+                    <p style="display:inline;">
+                        (${product.rating}⭐)
+                    </p>
                 </div>
                 <h2 class="product-title">${product.title}</h2>
                 <p class="product-text">${product.description}</p>
-                <a href="#">Know more ➝</a>
+                <a href="../singlePage/singlePage.html?id=${product.id}">BUY NOW</a>
             </div>
             `;
         }
